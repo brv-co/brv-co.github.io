@@ -1,4 +1,4 @@
-// Main JS for BRV Landing Page - Dual Theme Support
+// Main JS for Boreddy Landing Page - Dual Theme Support
 
 document.addEventListener('DOMContentLoaded', () => {
 

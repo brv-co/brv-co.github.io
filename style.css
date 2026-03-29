@@ -1,33 +1,33 @@
-/* CSS Design System for BRV Company - Dual Theme */
 :root {
     /* Theme Tokens - Light Mode (Default) */
     --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --text-muted: #555555;
-    --accent-cyan: #007cc7; /* More contrast for light mode */
-    --accent-purple: #7209b7;
-    --surface-color: #f8f9fa;
-    --border-color: rgba(0, 0, 0, 0.08);
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --hero-img: url('assets/hero_light.png');
+    --text-color: #0c1015;
+    --text-muted: #4a5568;
+    --accent-primary: #0066cc; /* Deep Blue */
+    --accent-secondary: #00d2ff; /* Electric Cyan */
+    --surface-color: #f7fafc;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --hero-img: url('assets/hero_bg.png'); /* Using new hero background */
     
     /* Global Variables */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-heading: 'Orbitron', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --transition-smooth: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --radius-premium: 24px;
 }
 
 [data-theme='dark'] {
     /* Theme Tokens - Dark Mode */
-    --bg-color: #0b0e11;
-    --text-color: #ffffff;
-    --text-muted: rgba(255, 255, 255, 0.6);
-    --accent-cyan: #00f2ff;
-    --accent-purple: #9d4edd;
-    --surface-color: #161b22;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.03);
+    --bg-color: #05070a;
+    --text-color: #f8f9fa;
+    --text-muted: rgba(248, 249, 250, 0.6);
+    --accent-primary: #00d2ff;
+    --accent-secondary: #0066cc;
+    --surface-color: #0d1117;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(13, 17, 23, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
     --hero-img: url('assets/hero_bg.png');
 }
@@ -70,21 +70,33 @@ h1, h2, h3 {
 }
 
 .highlight {
-    color: var(--accent-cyan);
-    text-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .tag-line {
     font-family: var(--font-heading);
     color: var(--accent-cyan);
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-left: 3px solid var(--accent-cyan);
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--accent-primary);
+}
+
+.tag-line::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: var(--accent-primary);
+    display: block;
 }
 
 /* Theme Toggle */
